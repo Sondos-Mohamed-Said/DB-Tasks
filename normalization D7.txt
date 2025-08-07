@@ -1,0 +1,104 @@
+0NF
+
+D (dept pk , dname,loc,mgr_name,mgr_id_no,tel_extn)
+C (cust pk , cust_name , date_comp,nature_comp)
+
+1NF
+
+D (dept pk , dname,loc,mgr_name,mgr_id_no,tel_extn)
+C ((cust pk ,dept fk)pk , cust_name ,nature_comp)
+
+2NF
+D (dept pk , dname,loc,mgr_name,mgr_id_no,tel_extn)
+n_c ((cust pk ,dept fk)pk ,nature_comp)
+c_n (cust pk,cust_name)
+
+3NF
+D (dept pk , dname,loc,mgr_id_no fk ,tel_extn)
+n_c ((cust pk ,dept fk)pk ,nature_comp)
+c_n (cust pk,cust_name)
+m_i(mgr_id_no pk , mgr_name)
+
+
+********************
+0NF   
+emp((Emp-No,Proj-id)pk ,Emp-Name, Dept,Dept Manager,Proj-Start-Date, Location,Weeks-on Project) 
+
+1NF
+emp(Emp-No pk,Emp-Name, Dept,Dept Manager)
+e_d((Emp-No,Proj-id)pk, Proj-Start-Date)
+e_l((Emp-No,Proj-id)pk , Location)
+e_w((Emp-No,Proj-id)pk ,Weeks-on-Project)
+
+
+2NF
+emp(Emp-No pk,Emp-Name, Dept,Dept Manager)
+e_d((Emp-No,Proj-id)pk, Proj-Start-Date)
+e_l( Proj-id pk , Location)
+e_w((Emp-No,Proj-id)pk ,Weeks-on-Project)
+
+
+
+3NF
+emp(Emp-No pk,Emp-Name, Dept FK)
+e_d((Emp-No,Proj-id)pk, Proj-Start-Date)
+e_l( Proj-id pk , Location)
+e_w((Emp-No,Proj-id)pk ,Weeks-on-Project)
+D_M(Dept PK ,Dept Manager)
+
+------------------------------------------------
+
+تعديل 
+
+0NF
+
+D (dept pk , dname,loc,mgr_name,mgr_id_no,tel_extn)
+C (cust pk , cust_name , date_comp,nature_comp)
+
+1NF
+
+D (dept pk , dname,loc,mgr_name,mgr_id_no,tel_extn)
+C ((cust pk ,dept fk)pk , cust_name ,nature_comp)
+
+2NF
+D (dept pk , dname,loc,mgr_name,mgr_id_no,tel_extn)
+n_c ((cust pk ,dept fk)pk ,nature_comp)
+c_n (cust pk,cust_name)
+
+3NF
+D (dept pk , dname,loc,mgr_id_no fk ,tel_extn)
+n_c ((cust pk ,dept fk)pk ,nature_comp)
+c_n (cust pk,cust_name)
+m_i(mgr_id_no pk , mgr_name)
+
+
+********************
+0NF   
+emp((Emp-No,Proj-id)pk ,Emp-Name, Dept,Dept Manager,Proj-Start-Date, Location,Weeks-on Project) 
+
+1NF
+emp(Emp-No pk,Emp-Name, Dept,Dept Manager)
+e_d((Emp-No,Proj-id)pk, Proj-Start-Date,,Weeks-on-Project)
+e_l(Proj-id pk , Location)
+**e_w((Emp-No,Proj-id)pk ,Weeks-on-Project)
+
+
+2NF
+emp(Emp-No pk,Emp-Name, Dept,Dept Manager)
+e_d(Proj-id pk, Proj-Start-Date)
+e_l( Proj-id pk , Location)
+e_w((Emp-No,Proj-id)pk ,Weeks-on-Project)
+
+
+
+3NF
+emp(Emp-No pk,Emp-Name, Dept FK)
+e_d(Proj-id pk, Proj-Start-Date)
+e_l( Proj-id pk , Location)
+e_w((Emp-No,Proj-id)pk ,Weeks-on-Project)
+D_M(Dept PK ,Dept Manager)
+
+
+
+
+
