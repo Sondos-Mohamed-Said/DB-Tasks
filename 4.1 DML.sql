@@ -9,7 +9,7 @@ values('Sondos','Mohamed',102672, '1-10-2003' ,' 15 tharwat street ,Suez','F',
 --14
 --Insert another employee with personal data your friend as new employee in
 --department number 30, SSN = 102660, 
---but don’t enter any value for salary or supervisor number to him.
+--but donâ€™t enter any value for salary or supervisor number to him.
 
 insert into Employee 
 values('Gharam','Said',102660, '6-24-2002' ,' 15 Horia street ,Adly','F',
@@ -178,7 +178,7 @@ delete from Works_for where ESSN = 223344
 delete from Dependent where ESSN = 223344
 delete from Employee where SSN = 223344
 --14
---Try to update all salaries of employees who work in Project ‘Al Rabwah’ by 30% 
+--Try to update all salaries of employees who work in Project â€˜Al Rabwahâ€™ by 30% 
 Update Employee
 set Salary += Salary * 0.3 
 where ssn in (
