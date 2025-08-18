@@ -12,9 +12,9 @@ exec P1
 
 --2
 -- a stored procedure that will check for the # of employees in the project p1
---if they are more than 3 print message to the user ì'The number of employees 
---in the project p1 is 3 or more'î if they are less display a message to the user 
---ì'The following employees work for the project p1'î in addition to the first name 
+--if they are more than 3 print message to the user ‚Äú'The number of employees 
+--in the project p1 is 3 or more'‚Äù if they are less display a message to the user 
+--‚Äú'The following employees work for the project p1'‚Äù in addition to the first name 
 --and last name of each one .[Company DB] Create 
 
 
@@ -103,13 +103,13 @@ END;
 
 --5
 --Create a trigger to prevent anyone from inserting a new record in the Department table [ITI DB] 
---ìPrint a message for user to tell him that he canít insert a new record in that tableî 
+--‚ÄúPrint a message for user to tell him that he can‚Äôt insert a new record in that table‚Äù 
 CREATE TRIGGER PREV_INSERT
 ON DEPARTMENT
 INSTEAD OF INSERT
 AS
 BEGIN
-	PRINT 'canít insert a new record in that table'
+	PRINT 'can‚Äôt insert a new record in that table'
 END
 
 --6
@@ -176,7 +176,7 @@ select * from Student_Audit
 
 --8
 --Create a trigger on student table instead of delete to add Row in Student Audit
---table (Server User Name, Date, Note) where note will be ì try to delete Row with Key=[Key Value]î
+--table (Server User Name, Date, Note) where note will be ‚Äú try to delete Row with Key=[Key Value]‚Äù
 CREATE TRIGGER trg_Student_Audit_Delete
 ON student
 INSTEAD OF DELETE
