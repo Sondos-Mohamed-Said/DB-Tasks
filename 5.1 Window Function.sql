@@ -68,7 +68,7 @@ from Instructor
 order by Salary
 
 --11
---Select instructor name and his salary but if there is no salary display instructor bonus keyword. ìuse coalesce Functionî 
+--Select instructor name and his salary but if there is no salary display instructor bonus keyword. ‚Äúuse coalesce Function‚Äù 
 
 SELECT 
     Ins_Name, 
@@ -90,7 +90,7 @@ where u.st_id = s.St_super
 
 --14
 --Write a query to select the highest two salaries in Each Department for instructors 
---who have salaries. ìusing one of Ranking Functionsî 
+--who have salaries. ‚Äúusing one of Ranking Functions‚Äù 
 
 SELECT *
 FROM (
@@ -104,7 +104,7 @@ WHERE RowNum <= 2;
 
 --15
 --Write a query to select a random  student from each department.  
---ìusing one of Ranking Functionsî 
+--‚Äúusing one of Ranking Functions‚Äù 
 
 
 SELECT *
