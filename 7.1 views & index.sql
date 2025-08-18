@@ -30,7 +30,7 @@ JOIN
 
 --3
 --Create a view that will display Instructor Name, 
---Department Name for the ‘SD’ or ‘Java’ Department 
+--Department Name for the â€˜SDâ€™ or â€˜Javaâ€™ Department 
 create view V2(Instructor_Name,Department_Name)
 as
 	select ins_name,dept_Name
@@ -40,10 +40,10 @@ as
 
 SELECT * FROM V3
 --4
---Create a view “V1” that displays student data for student who lives in Alex or Cairo. 
+--Create a view â€œV1â€ that displays student data for student who lives in Alex or Cairo. 
 --Note: Prevent the users to run the following query 
---Update V1 set st_address=’tanta’
---Where st_address=’alex’;
+--Update V1 set st_address=â€™tantaâ€™
+--Where st_address=â€™alexâ€™;
 
 create view V3
 as
@@ -59,7 +59,7 @@ WHERE st_address = 'Alex';
 
 --4
 --Create a view that will display the project name and the number 
---of employees work on it. “Use Company DB”
+--of employees work on it. â€œUse Company DBâ€
 
 create view V4 (project_name , number_of_employees)
 as
